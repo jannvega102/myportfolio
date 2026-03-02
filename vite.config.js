@@ -1,11 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+// vite.config.js
 export default defineConfig({
   plugins: [vue()],
-  // Update this to match your new repo name
-  base: '/myportfolio/', 
-  build: {
-    outDir: 'dist',
-  }
+  base: '/myportfolio/', // This is the ONLY thing that fixes the 404
 })
