@@ -10,7 +10,7 @@ const pages = ['about', 'resume', 'portfolio']
       <li v-for="page in pages" :key="page">
         <button
           type="button"
-          class="navbar-link px-2 py-5 text-xs text-light-gray transition-colors duration-300 hover:text-light-gray/90 md:text-sm lg:font-medium"
+          class="px-2 py-5 text-xs transition-colors duration-300 navbar-link text-light-gray hover:text-light-gray/90 md:text-sm lg:font-medium"
           :class="{ 'text-accent': currentPage === page }"
           @click="emit('navigate', page)"
         >

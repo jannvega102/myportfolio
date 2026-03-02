@@ -12,7 +12,7 @@ function toggle() {
     :class="{ 'max-h-[405px] lg:max-h-none': props.open }"
   >
     <div class="flex items-center justify-start gap-4 lg:flex-col">
-      <div class="info-content flex-1 lg:text-center">
+      <div class="flex-1 info-content lg:text-center">
         <h1 class="name mb-2.5 text-[clamp(1rem,2.5vw+0.75rem,17px)] font-medium leading-tight text-[hsl(0,0%,18%)]">
           Jann Niño Armar T. Vega
         </h1>
@@ -32,14 +32,14 @@ function toggle() {
     </div>
 
     <div
-      class="sidebar-more transition-all duration-500 ease-in-out lg:visible lg:opacity-100"
+      class="transition-all duration-500 ease-in-out sidebar-more lg:visible lg:opacity-100"
       :class="props.open ? 'visible opacity-100' : 'invisible opacity-0'"
     >
       <div class="separator my-4 h-px w-full bg-jet shadow-[0_1px_0_hsla(0,0%,100%,.5)]" />
 
-      <ul class="contacts-list grid grid-cols-1 gap-4 lg:grid-cols-1">
-        <li class="contact-item flex items-center gap-4">
-          <div class="icon-box flex h-8 w-8 items-center justify-center rounded-lg border border-jet text-base text-accent shadow-sm">
+      <ul class="grid grid-cols-1 gap-4 contacts-list lg:grid-cols-1">
+        <li class="flex items-center gap-4 contact-item">
+          <div class="flex items-center justify-center w-8 h-8 text-base border rounded-lg shadow-sm icon-box border-jet text-accent">
             <ion-icon name="mail-outline" />
           </div>
           <div class="contact-info min-w-0 max-w-[calc(100%-46px)]">
@@ -47,8 +47,8 @@ function toggle() {
             <a href="mailto:jannarmarvega@gmail.com" class="contact-link text-[13px] text-[hsl(0,0%,18%)]">jannarmarvega@gmail.com</a>
           </div>
         </li>
-        <li class="contact-item flex items-center gap-4">
-          <div class="icon-box flex h-8 w-8 items-center justify-center rounded-lg border border-jet text-base text-accent shadow-sm">
+        <li class="flex items-center gap-4 contact-item">
+          <div class="flex items-center justify-center w-8 h-8 text-base border rounded-lg shadow-sm icon-box border-jet text-accent">
             <ion-icon name="phone-portrait-outline" />
           </div>
           <div class="contact-info min-w-0 max-w-[calc(100%-46px)]">
@@ -56,8 +56,8 @@ function toggle() {
             <a href="tel:+639525567487" class="contact-link text-[13px] text-[hsl(0,0%,18%)]">+63 952 556 7487</a>
           </div>
         </li>
-        <li class="contact-item flex items-center gap-4">
-          <div class="icon-box flex h-8 w-8 items-center justify-center rounded-lg border border-jet text-base text-accent shadow-sm">
+        <li class="flex items-center gap-4 contact-item">
+          <div class="flex items-center justify-center w-8 h-8 text-base border rounded-lg shadow-sm icon-box border-jet text-accent">
             <ion-icon name="logo-linkedin" />
           </div>
           <div class="contact-info min-w-0 max-w-[calc(100%-46px)]">

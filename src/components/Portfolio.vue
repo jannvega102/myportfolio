@@ -72,7 +72,7 @@ const selectLabel = computed(() => {
     </ul>
 
     <!-- Mobile filter dropdown -->
-    <div class="filter-select-box relative mb-6 md:hidden">
+    <div class="relative mb-6 filter-select-box md:hidden">
       <button
         type="button"
         class="filter-select flex w-full items-center justify-between rounded-[14px] border border-jet bg-white px-4 py-3 text-sm font-light text-light-gray shadow-sm"
@@ -80,7 +80,7 @@ const selectLabel = computed(() => {
         @click="toggleSelect"
       >
         <span>{{ selectLabel }}</span>
-        <span class="select-icon transition-transform duration-500" :class="{ 'rotate-180': selectOpen }">
+        <span class="transition-transform duration-500 select-icon" :class="{ 'rotate-180': selectOpen }">
           <ion-icon name="chevron-down" />
         </span>
       </button>
@@ -100,7 +100,7 @@ const selectLabel = computed(() => {
       </ul>
     </div>
 
-    <ul class="project-list grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <ul class="grid grid-cols-1 gap-8 project-list md:grid-cols-2 lg:grid-cols-3">
       <li
         v-for="proj in filteredProjects"
         :key="proj.title"
@@ -117,7 +117,7 @@ const selectLabel = computed(() => {
               :src="proj.image"
               :alt="proj.title"
               loading="lazy"
-              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
             >
             <div class="project-item-icon-box absolute left-1/2 top-1/2 z-[1] flex -translate-x-1/2 -translate-y-1/2 scale-90 items-center justify-center rounded-xl bg-jet p-4 text-xl text-accent opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100">
               <ion-icon name="eye-outline" />

@@ -15,7 +15,7 @@
     @apply cursor-pointer bg-transparent border-none text-left font-[inherit];
   }
   a {
-    @apply no-underline block;
+    @apply block no-underline;
   }
   img, ion-icon, span {
     @apply block;
