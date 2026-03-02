@@ -1,9 +1,25 @@
-/* Core SPA Layout */
+:root {
+  --bg-dark: #121212;
+  --card-bg: #1e1e1f;
+  --accent: #ffdb70;
+  --white: #ffffff;
+  --text-gray: #d6d6d6;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* SPA Animation Logic */
 [data-page] {
   display: none;
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  transition: all 0.4s ease-in-out;
 }
 
 [data-page].active {
@@ -12,21 +28,21 @@
   transform: translateY(0);
 }
 
-/* Sidebar & Navbar Layout */
-.sidebar { background: #1e1e1f; border-radius: 20px; padding: 25px; }
-.navbar { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(30, 30, 31, 0.95); backdrop-filter: blur(10px); z-index: 5; }
+/* Sidebar & Cards */
+.sidebar { background: var(--card-bg); padding: 30px; border-radius: 20px; }
+.badge { background: #2b2b2c; color: var(--accent); padding: 5px 12px; border-radius: 8px; font-size: 12px; margin-right: 5px; }
 
-/* Desktop Navigation Adjustments */
+/* Navbar Mobile & Desktop */
+.navbar { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(30, 30, 31, 0.95); backdrop-filter: blur(10px); z-index: 10; border-radius: 20px 20px 0 0; }
+
 @media (min-width: 1024px) {
   .navbar { position: absolute; bottom: auto; top: 0; right: 0; width: max-content; border-radius: 0 20px; }
 }
 
-.navbar-link.active { color: #ffdb70; font-weight: 600; }
+.navbar-link.active { color: var(--accent); font-weight: bold; }
 
-.badge {
-  background: #2b2b2c;
-  color: #ffdb70;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 11px;
-}
+/* Project Grid */
+.project-list { display: grid; grid-template-columns: 1fr; gap: 30px; list-style: none; padding: 0; }
+@media (min-width: 768px) { .project-list { grid-template-columns: 1fr 1fr; } }
+.project-img { border-radius: 16px; overflow: hidden; position: relative; }
+.project-description { color: var(--text-gray); font-size: 14px; line-height: 1.6; }
